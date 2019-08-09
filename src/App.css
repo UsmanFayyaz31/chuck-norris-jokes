@@ -32,18 +32,30 @@
   }
 }
 
+#text {
+  font-size: 20px;
+}
+
 #container {
-  margin-top: 4%;
+  margin-top: 3%;
   text-align: center;
 }
 
 #title {
-  width: 300px;
+  width: 350px;
+  border-radius: 8px;
 }
 
 #new-quote {
   margin-bottom: 25px;
   border-radius: 10px;
+  font-size: 18px;
+}
+
+#new-quote:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
 
 #quote-box {
@@ -52,15 +64,15 @@
   border-radius: 12px;
   border: 2px solid black;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 3%;
   box-shadow: 10px 10px 5px white;
 }
 
-body {
-  background-image: linear-gradient(to right, #404040, #999999);
-  color: white;
+#title-msg {
+  text-decoration: underline;
 }
 
-#logo {
-  width: 35px;
+body {
+  background-image: linear-gradient(to right, #6600cc, #a64dff);
+  color: white;
 }

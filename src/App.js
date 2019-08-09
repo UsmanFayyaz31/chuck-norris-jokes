@@ -6,7 +6,8 @@ class QuoteMachine extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quote: ""
+      quote: "",
+      color: 0
     }
     this.handleClick = this.handleClick.bind(this);
     this.getNewContent = this.getNewContent.bind(this);
@@ -28,8 +29,8 @@ class QuoteMachine extends React.Component {
   render() {
     return(
       <div id="container">
+        <h1 id ="title-msg">Chuck Norris jokes</h1>
         <img id="title" src={titlePic} alt="logo"></img>
-        <h3>Chuck Norris jokes</h3>
         <div id="quote-box">
           <p id="text">{this.state.quote}</p>
           <button id="new-quote" onClick={this.handleClick}>Next Joke</button>
