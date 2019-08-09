@@ -30,7 +30,7 @@ class QuoteMachine extends React.Component {
     return(
       <div id="container">
         <h1 id ="title-msg">Chuck Norris jokes</h1>
-        <img id="title" src={titlePic} alt="logo"></img>
+        <img id="title-img" src={titlePic} alt="logo"></img>
         <div id="quote-box">
           <p id="text">{this.state.quote}</p>
           <button id="new-quote" onClick={this.handleClick}>Next Joke</button>

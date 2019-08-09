@@ -41,9 +41,10 @@
   text-align: center;
 }
 
-#title {
+#title-img {
   width: 350px;
   border-radius: 8px;
+  border: 1px solid black;
 }
 
 #new-quote {
@@ -54,7 +55,7 @@
 
 #new-quote:hover {
   cursor: pointer;
-  background-color: black;
+  background-color: #400080;
   color: white;
 }
 
@@ -65,7 +66,8 @@
   border: 2px solid black;
   text-align: center;
   margin-top: 3%;
-  box-shadow: 10px 10px 5px white;
+  background-color: #8c1aff;
+  box-shadow: 10px 10px 5px #cc99ff;
 }
 
 #title-msg {
@@ -73,6 +75,6 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #6600cc, #a64dff);
+  background-image: linear-gradient(to right, #6600cc, #bf80ff);
   color: white;
 }
