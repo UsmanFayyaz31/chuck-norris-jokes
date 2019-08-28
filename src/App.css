@@ -67,7 +67,7 @@
   text-align: center;
   margin-top: 3%;
   background-color: #8c1aff;
-  box-shadow: 10px 10px 5px #cc99ff;
+  box-shadow: 10px 10px 5px rgba(204, 153, 255, 0.5);
 }
 
 #title-msg {
@@ -76,5 +76,15 @@
 
 body {
   background-image: linear-gradient(to right, #6600cc, #bf80ff);
+  color: white;
+}
+
+#author {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#author a{
   color: white;
 }
