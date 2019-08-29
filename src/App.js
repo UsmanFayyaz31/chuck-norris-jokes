@@ -14,7 +14,9 @@ class QuoteMachine extends React.Component {
     this.getNewContent = this.getNewContent.bind(this);
   }
   handleClick(event) {
-    this.getNewContent();
+    if (this.state.loader === false) {
+      this.getNewContent();
+    }
   }
 
   getNewContent() {
@@ -37,7 +39,7 @@ class QuoteMachine extends React.Component {
           <div id="quote-box">
             <div className="loader" style={(this.state.loader) ? { display: "block" } : { display: "none" }} ></div>
             <p id="text" style={(this.state.loader) ? { display: "none" } : { display: "block" }}>{this.state.quote}</p>
-            <button id="new-quote" onClick={this.handleClick}>Next Joke</button>
+            <button id="new-quote" onClick={this.handleClick}>Next Joke<div className="loaderButton" style={(this.state.loader) ? { display: "inline-block" } : { display: "none" }}></div></button>
           </div>
         </div>
         <div id="author">
