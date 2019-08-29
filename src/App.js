@@ -7,7 +7,8 @@ class QuoteMachine extends React.Component {
     super(props);
     this.state = {
       quote: "",
-      color: 0
+      color: 0,
+      loader: true
     }
     this.handleClick = this.handleClick.bind(this);
     this.getNewContent = this.getNewContent.bind(this);
@@ -17,6 +18,10 @@ class QuoteMachine extends React.Component {
   }
 
   getNewContent() {
+    setTimeout(() => this.setState({ loader: false }), 1100);
+
+    this.setState({ loader: true });
+
     fetch("https://api.chucknorris.io/jokes/random")
       .then(response => response.json())
       .then(dat => this.setState({ quote: dat.value }));
@@ -30,15 +35,16 @@ class QuoteMachine extends React.Component {
     return (
       <div>
         <div id="container">
-          <h1 id="title-msg">Chuck Norris jokes</h1>
+          <h1 id="title-msg">Chuck Norris Jokes</h1>
           <img id="title-img" src={titlePic} alt="logo"></img>
           <div id="quote-box">
-            <p id="text">{this.state.quote}</p>
+            <div className="loader" style={(this.state.loader) ? {display: "block"} : {display: "none"}} ></div>
+            <p id="text"  style={(this.state.loader) ? {display: "none"} : {display: "block"}}>{this.state.quote}</p>
             <button id="new-quote" onClick={this.handleClick}>Next Joke</button>
           </div>
         </div>
         <div id="author">
-          <p>Designed and Coded by</p> <br />
+          <p>Designed and Coded by</p>
           <a href="https://github.com/UsmanFayyaz/chuck-norris-jokes">Usman Fayyaz</a>
         </div>
       </div>
