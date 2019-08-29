@@ -18,13 +18,10 @@ class QuoteMachine extends React.Component {
   }
 
   getNewContent() {
-    setTimeout(() => this.setState({ loader: false }), 1100);
-
     this.setState({ loader: true });
-
     fetch("https://api.chucknorris.io/jokes/random")
       .then(response => response.json())
-      .then(dat => this.setState({ quote: dat.value }));
+      .then(dat => this.setState({ quote: dat.value, loader: false }));
   }
 
   componentDidMount() {
@@ -38,8 +35,8 @@ class QuoteMachine extends React.Component {
           <h1 id="title-msg">Chuck Norris Jokes</h1>
           <img id="title-img" src={titlePic} alt="logo"></img>
           <div id="quote-box">
-            <div className="loader" style={(this.state.loader) ? {display: "block"} : {display: "none"}} ></div>
-            <p id="text"  style={(this.state.loader) ? {display: "none"} : {display: "block"}}>{this.state.quote}</p>
+            <div className="loader" style={(this.state.loader) ? { display: "block" } : { display: "none" }} ></div>
+            <p id="text" style={(this.state.loader) ? { display: "none" } : { display: "block" }}>{this.state.quote}</p>
             <button id="new-quote" onClick={this.handleClick}>Next Joke</button>
           </div>
         </div>
