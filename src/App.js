@@ -43,8 +43,8 @@ class QuoteMachine extends React.Component {
           </div>
         </div>
         <div id="author">
-          <p>Designed and Coded by</p>
-          <a href="https://github.com/UsmanFayyaz/chuck-norris-jokes">Usman Fayyaz</a>
+          <p>Designed and Coded by <b>Usman Fayyaz</b>.</p> <br />
+          <a href="https://github.com/UsmanFayyaz/chuck-norris-jokes">Link to github repository.</a>
         </div>
       </div>
     );
